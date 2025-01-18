@@ -11,6 +11,7 @@ import {
   Label,
   Breadcrumb,
   TextField,
+  Chip,
 } from '@repo/ui';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
@@ -200,6 +201,28 @@ export default function Home() {
           <Breadcrumb.Item>경제</Breadcrumb.Item>
           <Breadcrumb.Item active>기초 경제 지식</Breadcrumb.Item>
         </Breadcrumb>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <Chip variant="green" leftAddon={<Icon name="circle" type="fill" />}>
+          업로드할 글
+        </Chip>
+        <Chip variant="grey" leftAddon={<Icon name="circle" type="fill" />}>
+          생성된 글
+        </Chip>
+        <Chip variant="purple" leftAddon={<Icon name="circle" type="fill" />}>
+          수정 중인 글
+        </Chip>
+        <Chip
+          variant="purple"
+          rightAddon={
+            <Text color="purple600" fontSize={16} fontWeight="semibold">
+              무작위로 업로드 돼요
+            </Text>
+          }
+          closable
+        >
+          전체선택
+        </Chip>
       </div>
     </div>
   );
