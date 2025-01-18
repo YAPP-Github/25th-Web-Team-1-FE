@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+
 import Create from './Create';
 
 export default function CreatePage() {

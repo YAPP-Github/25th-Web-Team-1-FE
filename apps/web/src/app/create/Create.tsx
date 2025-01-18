@@ -1,5 +1,3 @@
-'use client';
-
 import {
   Breadcrumb,
   TextField,
@@ -12,6 +10,7 @@ import {
 } from '@repo/ui';
 import Link from 'next/link';
 import * as styles from './pageStyle.css';
+import { motion } from 'motion/react';
 
 export default function Create() {
   return (
@@ -34,10 +33,40 @@ export default function Create() {
         </Button>
       </div>
       <Spacing size={80} />
-      <Text.H1 className={styles.gradientTitleStyle}>
+      <motion.h1
+        className={styles.gradientTitleStyle}
+        initial={{
+          y: '35vh',
+          scale: 2,
+          x: '-50%',
+          left: '50%',
+          position: 'absolute',
+        }}
+        animate={{
+          y: 0,
+          scale: 1,
+          x: 0,
+          left: 'auto',
+          position: 'relative',
+        }}
+        transition={{
+          type: 'spring',
+          duration: 0.6,
+          bounce: 0.22,
+        }}
+      >
         어떤 글을 생성할까요?
-      </Text.H1>
-      <div className={styles.containerStyle}>
+      </motion.h1>
+      <motion.div
+        className={styles.containerStyle}
+        initial={{ y: '100%' }}
+        animate={{ y: 0 }}
+        transition={{
+          type: 'spring',
+          duration: 0.6,
+          bounce: 0.22,
+        }}
+      >
         {/* 메인 컨텐츠 */}
         <div className={styles.contentStyle}>
           <div className={styles.sectionStyle}>
@@ -166,7 +195,7 @@ export default function Create() {
             </TextField>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
