@@ -8,6 +8,10 @@ export const spacing = {
   24: '2.4rem',
   32: '3.2rem',
   40: '4.0rem',
+  48: '4.8rem',
   64: '6.4rem',
+  80: '8.0rem',
   128: '12.8rem',
 } as const;
+
+export type SpacingType = typeof spacing;
