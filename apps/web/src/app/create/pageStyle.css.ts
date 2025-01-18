@@ -31,7 +31,7 @@ export const headerStyle = style({
 });
 
 export const gradientTitleStyle = style({
-  background: 'linear-gradient(90deg, #1F3761 43%, #2646C5 50%, #615BE7 100%)',
+  background: 'linear-gradient(90deg, #1F3761 30%, #2646C5 47%, #615BE7 100%)',
   backgroundClip: 'text',
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
